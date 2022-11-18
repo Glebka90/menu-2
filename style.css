@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+.body {
+  margin-left: 45px;
+  transition: all ease 1s;
+}
+.menu {
+  width: 300px;
+  margin-left: -204px;
+  background: gray;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  transition: all ease 1s;
+}
+
+.menu-burger {
+  width: 96px;
+  height: 96px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  font-size: 0;
+  cursor: pointer;
+  border: none;
+  background: #cb0032;
+}
+.menu-burger__btn_line .menu-burger__line {
+  transition: background 0s 0.3s;
+}
+
+.menu-burger__line {
+  height: 8px;
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 44px;
+  display: block;
+  background-color: #fff;
+}
+.menu-burger__line::after,
+.menu-burger__line::before {
+  content: "";
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  display: block;
+  background-color: #fff;
+}
+.menu-burger__btn_line .menu-burger__line::after,
+.menu-burger__btn_line .menu-burger__line::before {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+.menu-burger__line::after {
+  bottom: -20px;
+}
+.menu-burger__line::before {
+  top: -20px;
+}
+.menu-burger .menu-burger__line::after {
+  transition-property: bottom, transform;
+}
+.menu-burger .menu-burger__line::before {
+  transition-property: top, transform;
+}
+.menu-burger.is-active {
+  background: #16fd95;
+}
+.menu-burger.is-active .menu-burger__line {
+  background: none;
+}
+.menu-burger.is-active .menu-burger__line::after {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+.menu-burger.is-active .menu-burger__line::before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+.menu-burger.is-active .menu-burger__line::after,
+.menu-burger.is-active .menu-burger__line::before {
+  transition-delay: 0s, 0.3s;
+}
+.menu.nav-active {
+  margin-left: 0;
+}
+
+.menu__list {
+  height: 100vh;
+  margin-top: 50px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+.menu__link {
+  font-size: 36px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+.menu__link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.body-active {
+  margin-left: 300px;
+}
+.conteiner {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+}
+.heading {
+  margin-bottom: 15px;
+}
